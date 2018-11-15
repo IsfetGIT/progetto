@@ -1,0 +1,45 @@
+
+
+body {
+	background:	#233656;
+	color: #cdd6d5;
+	font: arial;
+	text-align: center;
+}
+
+header{
+	background: #7b9ba6;
+	width: 100%;
+	border-radius: 10px 10px 10px 10px;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+}
+
+div{
+	padding-top: 1em;
+}
+
+#form{
+	margin: 0 auto;
+}
+
+#table{
+	padding-left: 40em;
+}
+
+#invia{
+	margin: 2em;
+	background: #eef4f2;
+	color: black;
+	font-weight: bold;
+	border-radius: 5px 5px 5px 5px;
+}
+
+#reset{
+	margin: 2em;
+	background: #eef4f2;
+	color: black;
+	font-weight: bold;
+	border-radius: 5px 5px 5px 5px;
+}
+
