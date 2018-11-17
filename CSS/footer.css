@@ -1,0 +1,21 @@
+.footer{
+    position: auto;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: #;
+    text-align: center;
+}
+
+#paypal {
+	width: 100px;
+	padding-bottom: 0.5em;
+}
+
+#mastercard{
+	width: 100px;
+}
+
+#visa{
+	width: 100px;
+}

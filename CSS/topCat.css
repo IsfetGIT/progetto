@@ -1,0 +1,28 @@
+
+body {
+	text-align: center;
+}
+
+
+#home{
+	width: 30px;
+	height: 25px;
+	padding-left: 3em;
+	padding-top: 0.5em;
+}
+
+#head{
+	width: 300px;
+	height: 250px;
+	padding-top: 0;
+}
+
+#top{
+	background: #BD3331;
+	width: 100%;
+	color: #dadada;
+	font-family: 'Open Sans', sans-serif;
+	border-radius: 10px 10px 10px 10px;
+	text-align: left;
+	height: 3em;
+}

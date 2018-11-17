@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta name="author" content="Michele Dilollo, Daniil Girleanu">
+		<link href="./CSS/topCat.css" rel="stylesheet" type="text/css">
+		<link href="./CSS/carrello.css" rel="stylesheet" type="text/css">
+		<link href="./CSS/footer.css" rel="stylesheet" type="text/css">
+	</head>
+	<title>Carrello</title>
+	<body>
+		<img id="head" src="immagini/shop-logo.jpg">
+		<header id="top">
+			<h2><a href="homepage.html"a><img id="home" src="immagini/if_icon-arrow-left-b_211617.png"></h2></a>
+		</header>
+		<div>
+			<form id="form" method="post" action="">
+				<table id="t" border="0" cellpadding="10" >
+					<tr>
+					<td align="center">Nome
+					<td><input type="text" name="nome" maxlength="20" size="30" placeholder="Inserisci nome">
+					<td align="center">Cognome
+					<td><input type="text" name="cognome" maxlength="20" size="30" placeholder="Inserisci cognome">	
+					<tr>
+					<td align="center">Indirizzo
+					<td colspan="1"><input type="text" name="via" maxlength="40" size="30" placeholder="Inserisci via"><input type="text" name="n" maxlength="5" size="5" placeholder="N*">
+					<tr>
+					<td align="center">Citt&aacute;
+					<td><input type="text" name="citt" maxlength="30" size="40" placeholder="Inserisci Citt&aacute">
+					<td align="center">CAP
+					<td><input type="text" name="cap" maxlength="5" size="5" placeholder="cap">
+					<tr>
+					<td align="center">Dati per il pagamento
+					<td><input type="text" name="card" maxlength="16" size="20" placeholder="Inserisci Carta di Credito"><td><input type="text" name="scade" maxlength="5" size="5" placeholder="gg/mm"><td><input type="text" name="secure" maxlength="3" size="3" placeholder="N*">
+					<tr>
+				</table>
+				<div align="center">
+					<input type="radio" value="false">Ho letto e accetto <a href="">l'informativa</a>	
+					<br>
+					<br>
+					<button formaction="" form="form" id="invia"><img id="shop" src="immagini/if_shopping-cart_326700.png"></button>
+				</div>
+			</form>
+		</div>
+		
+		<div class="footer">
+		<img id="paypal" src="immagini/paypalnuovologo-650x245.jpg"><img id="mastercard" src="immagini/mastercard-logo-vecchio.jpg"><img id="visa" src="immagini/visa-logo.png">
+		<p>PcBuilder s.r.l, Via di scalo San Lorenzo, 00185, Roma(RM), Italia</p>
+	</div>
+	</body>
+</html>
