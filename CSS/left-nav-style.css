@@ -4,6 +4,10 @@
  * dal sito ioeweb.it
  */
  
+body{
+	background: white;
+}
+ 
 .nav {
     /*  largezza libera, potrai sperimentare */
     width: 320px;
