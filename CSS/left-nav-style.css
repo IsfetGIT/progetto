@@ -464,5 +464,13 @@ body {
 	margin-right: 1em;
 }
 
+#pc{
+	padding-left: 1em;
+    font-family: 'Geo', sans-serif;
+	color: #BD3331;
+	font-size: 4em;
+}
+
+
 /*pannello lato = 16a085*/
 /*colore separatori = dadada*/

@@ -12,11 +12,17 @@ body {
 	padding-top: 0.5em;
 }
 
-#head{
+h1{
+    font-family: 'Geo', sans-serif;
+	color: #BD3331;
+	font-size: 4em;
+}
+
+/*#head{
 	width: 210px;
 	height: 60px;
 	padding-top: 1em;
-}
+}*/
 
 #top{
 	background: #BD3331;
