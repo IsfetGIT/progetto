@@ -6,13 +6,11 @@ div{
 
 #form{
 	margin: 0 auto;
-	position: relative;
-
+	position: absolute;
+	left: 40em;
 }
 
-#table{
-	padding-left: 35em;
-}
+
 
 #invia{
 	margin: 2em;

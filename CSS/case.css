@@ -1,3 +1,4 @@
+
 div{
 	padding-top: 5em;
 	font-family: 'Open Sans', sans-serif;
@@ -5,13 +6,11 @@ div{
 
 #form{
 	margin: 0 auto;
-	position: relative;
-
+	position: absolute;
+	left: 40em;
 }
 
-#table{
-	padding-left: 40em;
-}
+
 
 #invia{
 	margin: 2em;
@@ -20,7 +19,6 @@ div{
 	font-weight: bold;
 	border-radius: 5px 5px 5px 5px;
 }
-
 #reset{
 	margin: 2em;
 	background: #eef4f2;
