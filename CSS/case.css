@@ -5,6 +5,7 @@ div{
 }
 
 #form{
+	top: 2em;
 	margin: 0 auto;
 	position: absolute;
 	left: 40em;
