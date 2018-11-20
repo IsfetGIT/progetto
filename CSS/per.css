@@ -1,1 +1,51 @@
+div{
+	padding-top: 5em;
+	font-family: 'Open Sans', sans-serif;
+}
+
+#form{
+	margin: 0 auto;
+	position: absolute;
+	left: 40em;
+}
+
+
+
+#invia{
+	margin: 2em;
+	background: #eef4f2;
+	color: black;
+	font-weight: bold;
+	border-radius: 5px 5px 5px 5px;
+}
+
+#reset{
+	margin: 2em;
+	background: #eef4f2;
+	color: black;
+	font-weight: bold;
+	border-radius: 5px 5px 5px 5px;
+}
+
+#cm{
+	width: 50px;
+	height: 40px;
+}
+
+#logi{
+	width: 50px;
+	height: 40px;
+}
+
+#razer{
+	width: 50px;
+	height: 40px;
+}
+
+
+
+
+
+
+
 
