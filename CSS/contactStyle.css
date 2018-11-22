@@ -1,0 +1,32 @@
+#select{
+	width: 200px;
+}
+
+form{
+	padding-top: 3em;
+	font-family: 'Open Sans', sans-serif;
+	height: 28em;
+}
+
+#t{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#shop{
+    padding-top: 0.3em;
+	width: 30px;
+	height: 30px;
+}
+
+#invia{
+	color: black;
+	position: center;
+	background: #eef4f2;
+	border-radius: 5px 5px 5px 5px;
+}
+
+#separator{
+	height: 5em;
+}
+

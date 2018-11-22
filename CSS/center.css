@@ -31,24 +31,29 @@ form{
 	border-radius: 5px 5px 5px 5px;
 }
 
-#corsair{
+#img1{
 	width: 50px;
 	height: 40px;
 }
 
-#tt{
+#img2{
 	width: 50px;
 	height: 40px;
 }
 
-#cm{
+#img3{
 	width: 50px;
 	height: 40px;
 }
 
-#evga{
+#img4{
 	width: 50px;
 	height: 40px;
+}
+
+#dot{
+	width: 10px;
+	height: 10px;
 }
 
 
