@@ -1,15 +1,19 @@
+
 div{
 	padding-top: 5em;
 	font-family: 'Open Sans', sans-serif;
 }
 
-#form{
-	margin: 0 auto;
-	position: absolute;
-	left: 40em;
+form{
+	padding-top: 3em;
+	font-family: 'Open Sans', sans-serif;
+	height: 28em;
 }
 
-
+#table{
+	margin-left: auto;
+	margin-right: auto;
+}
 
 #invia{
 	margin: 2em;
