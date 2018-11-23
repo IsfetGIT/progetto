@@ -4,9 +4,9 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="author" content="Michele Dilollo, Daniil Girleanu">
-		<link href="./CSS/topCat.css" rel="stylesheet" type="text/css">
 		<link href="./CSS/contactStyle.css" rel="stylesheet" type="text/css">
 		<link href="./CSS/footer.css" rel="stylesheet" type="text/css">
+		<link href="./CSS/topCat.css" rel="stylesheet" type="text/css">
 		<link href="https://fonts.googleapis.com/css?family=Geo" rel="stylesheet">
 		<link rel="shortcut icon" href="favicon.ico" />
 		<link rel="stylesheet" href="./CSS/style.css">
@@ -14,11 +14,10 @@
 		<link href="./CSS/popUP.css" rel="stylesheet" type="text/css">
 		
 	</head>
-	<title>Carrello</title>
+	
+	<title>Contattaci</title>
+	
 	<body>
-		
-		<!--<img id="head" src="immagini/shop.png">-->
-		
 		<!--menu a scomparsa-->
 		
 		<input type="checkbox" id="nav-toggle" hidden>
@@ -40,7 +39,7 @@
 					<li><a href="schedeVideo.html">Schede Video</a>
 					<li><a href="mobo.html">Mother Board</a>
 					<li><a href="ram.html">Memorie</a>
-					<li><a href="hd.html">HDD e SSD</a>
+					<li><a href="hd.html">HDD e SSD</a> 
 					<li><a href="psu.html">Alimentatori</a>
 					<li><a href="case.html">Case</a>
 					<li><a href="per.html">Periferiche</a> 
@@ -50,42 +49,45 @@
 				<font size="5">Contatti</a></font>
 			</h2>
 			<ul>
-				<li><a href="contatti.html">Form assistenza</a>
+				<li class="enable"><a href="contatti.html">Form assistenza</a>
 			</ul>
 		</nav>
 		
 		<!--<img id="head" src="immagini/mobo.png">-->
-		
-		<h1 id="h">Carrello</h1>
+		<h1 id="h">Contatti</h1>
 		
 		<div id="separator">
-			<br>
 		</div>
 		
-		<div>
-			<form id="form" method="post" action="">
-				<table id="t" border="0" cellpadding="10" >
+		<div id="form">
+			<form method="post" action="">
+				<table id="t" border="0" cellpadding="10">
 					<tr>
-					<td align="center">Nome
-					<td><input type="text" name="nome" maxlength="20" size="30" placeholder="Inserisci nome">
-					<td align="center">Cognome
-					<td><input type="text" name="cognome" maxlength="20" size="30" placeholder="Inserisci cognome">	
+						<td align="center">Nome
+						<td><input type="text" name="nome" maxlength="20" size="30" placeholder="inserisci nome">
+						<td align="center">Cognome
+						<td><input type="text" name="cognome" maxlength="20" size="30" placeholder="inserisci cognome">
 					<tr>
-					<td align="center">Indirizzo
-					<td colspan="1"><input type="text" name="via" maxlength="40" size="30" placeholder="Inserisci via"><input type="text" name="n" maxlength="5" size="5" placeholder="N*">
+						<td align="center">N*
+						<td><input type="text" name="numero" maxlength="20" size="30" placeholder="inserisci numero ordine">
+						<td align="center">Problema
+						<td><select size="1" cols="10" id="select">
+							<option selected value=nessuna>
+							<option value="Spedizione">Spedizione
+							<option value="Prodotto danneggiato">Prodotto danneggiato
+							<option value="Richiesta reso">Richiesta reso
+							<option value="Consegnato in ritardo">Cosegnato in ritardo
+							<option value="Prodotto errato">Prodotto errato
+							<option value="Richiesta assistenza">Richiesta assistenza
+						</select>	
 					<tr>
-					<td align="center">Citt&aacute;
-					<td><input type="text" name="citt" maxlength="30" size="40" placeholder="Inserisci Citt&aacute">
-					<td align="center">CAP
-					<td><input type="text" name="cap" maxlength="5" size="5" placeholder="cap">
-					<tr>
-					<td align="center">Dati per il pagamento
-					<td><input type="text" name="card" maxlength="16" size="20" placeholder="Inserisci Carta di Credito"><td><input type="text" name="scade" maxlength="5" size="5" placeholder="gg/mm"><td><input type="text" name="secure" maxlength="3" size="3" placeholder="N*">
-					<tr>
+						<td align="center">Descrizione
+						<td><textarea rows="6" cols="50"></textarea>
+						<td colspan="2"><input type="radio" value="false">Ho letto e accetto <a href="#win">l'informativa</a>
 				</table>
-				<div align="center">
-					<input type="radio" value="false">Ho letto e accetto <a href="#win">l'informativa</a>
-					<a href="#x" class="overlay" id="win"></a>
+				<input type="submit" value="Invia" id="invia">
+			</form>
+			<a href="#x" class="overlay" id="win"></a>
 					<div class="popup">
 						<header>
 							<font size="5">Articolo 13</font>
@@ -128,11 +130,6 @@
 						</p>
 						<a class="close" title="Chiudere" href="#close"></a>
 					</div>	
-					<br>
-					<br>
-					<button formaction="" form="form" id="invia"><img id="shop" src="immagini/if_shopping-cart_326700.png"></button>
-				</div>
-			</form>
 			<br>
 			<br>
 			<br>
@@ -144,8 +141,5 @@
 			</footer>
 		</div>
 		
-		<!--<div class="footer">
-		<img id="paypal" src="immagini/paypalnuovologo-650x245.jpg"><img id="mastercard" src="immagini/mastercard-logo-vecchio.jpg"><img id="visa" src="immagini/visa-logo.png">
-		<p>PcBuilder s.r.l, Via di scalo San Lorenzo, 00185, Roma(RM), Italia</p>-->
 	</body>
 </html>

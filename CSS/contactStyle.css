@@ -1,3 +1,6 @@
+#select{
+	width: 200px;
+}
 
 form{
 	padding-top: 3em;
@@ -17,6 +20,7 @@ form{
 }
 
 #invia{
+	color: black;
 	position: center;
 	background: #eef4f2;
 	border-radius: 5px 5px 5px 5px;
@@ -25,3 +29,4 @@ form{
 #separator{
 	height: 5em;
 }
+

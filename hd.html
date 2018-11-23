@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta name="author" content="Michele Dilollo, Daniil Girleanu">
-		<link href="./CSS/hd.css" rel="stylesheet" type="text/css">
+		<link href="./CSS/center.css" rel="stylesheet" type="text/css">
 		<link href="./CSS/footer.css" rel="stylesheet" type="text/css">
 		<link href="./CSS/topCat.css" rel="stylesheet" type="text/css">
 		<link href="https://fonts.googleapis.com/css?family=Geo" rel="stylesheet">
@@ -55,8 +55,8 @@
 		<div id="separator">
 		</div>
 
-		<div id="form">
-			<form method="post" action="" id="f">
+		<div>
+			<form method="post" action="" id="form">
 			
 				<table border="0" cellpadding=10 id="table">
 					<tr>
@@ -66,7 +66,7 @@
 						<th>Prezzo (EUR)</th>
 						<th>Acquista</th>
 					<tr>
-						<td><img id="wd" src="immagini/hd/wd.jpg">
+						<td><img id="img1" src="immagini/hd/wd.jpg">
 						<td align="center">WD Blue 1TB 7200rpm
 						<td><select size=1 cols=10>
 							<option selected value=nessuna>
@@ -79,7 +79,7 @@
 						<td align="center">45,99
 						<td><input type="checkbox" size="3" value="false">
 					<tr>
-						<td><img id="sea" src="immagini/hd/seagate.jpg">
+						<td><img id="img2" src="immagini/hd/seagate.jpg">
 						<td align="center">Seagate 1TB 64mb cache
 						<td><select size=1 cols=10>
 							<option selected value=nessuna>
@@ -92,7 +92,7 @@
 						<td align="center">42
 						<td><input type="checkbox" size="3" value="false">
 					<tr>
-						<td><img id="king" src="immagini/hd/kingston-logo.png">
+						<td><img id="img3" src="immagini/hd/kingston-logo.png">
 						<td align="center">Kingston ssd 128gb
 						<td><select size=1 cols=10>
 							<option selected value=nessuna>
@@ -105,7 +105,7 @@
 						<td align="center">78
 						<td><input type="checkbox" size="3" value="false">
 					<tr>
-						<td><img id="drevo" src="immagini/hd/drevo.jpeg">
+						<td><img id="img4" src="immagini/hd/drevo.jpeg">
 						<td align="center">Drevo x1 series 250gb
 						<td><select size=1 cols=10>
 							<option selected value=nessuna>
@@ -120,15 +120,20 @@
 				</table>
 	
 				<!--<input align="center" type="submit" value="Completa Acquisto" id="submit">-->
-				<button formaction="carrello.html" form="f" id="invia">Completa Ordine</button>
+				<button formaction="carrello.html" form="form" id="invia">Completa Ordine</button>
 				<input type="reset" value="Svuota carrello" id="reset">
 			</form>
 			<br>
 			<br>
+			<div id="push"></div>
+			<footer>
+				<img id="paypal" src="immagini/paypalnuovologo-650x245.jpg"><img id="mastercard" src="immagini/mastercard-logo-vecchio.jpg"><img id="visa" src="immagini/visa-logo.png">
+				<p>PcBuilder s.r.l, Via di scalo San Lorenzo, 00185, Roma(RM), Italia</p>
+			</footer>
 		</div>
-		<div class="footer">
+		<!--<div class="footer">
 			<img id="paypal" src="immagini/paypalnuovologo-650x245.jpg"><img id="mastercard" src="immagini/mastercard-logo-vecchio.jpg"><img id="visa" src="immagini/visa-logo.png">
 			<p>PcBuilder s.r.l, Via di scalo San Lorenzo, 00185, Roma(RM), Italia</p>
-		</div>
+		</div>-->
 	</body>
 </html>

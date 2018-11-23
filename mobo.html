@@ -5,7 +5,7 @@
 	<head>
 		<meta name="author" content="Michele Dilollo, Daniil Girleanu">
 		<link href="./CSS/topCat.css" rel="stylesheet" type="text/css">
-		<link href="./CSS/mobo.css" rel="stylesheet" type="text/css">
+		<link href="./CSS/center.css" rel="stylesheet" type="text/css">
 		<link href="./CSS/footer.css" rel="stylesheet" type="text/css">
 		<link href="https://fonts.googleapis.com/css?family=Geo" rel="stylesheet">
 		<link rel="shortcut icon" href="favicon.ico" />
@@ -58,8 +58,8 @@
 		<div id="separator">
 		</div>
 		
-		<div id="form">
-			<form method="post" action="" id="f">
+		<div>
+			<form method="post" action="" id="form">
 			
 				<table border="0" cellpadding=10 id="table">
 					<tr>
@@ -69,7 +69,7 @@
 						<th>Prezzo (EUR)</th>
 						<th>Acquista</th>
 					<tr>
-						<td><img id="giga" src="immagini/mobo/ogimg-logo.png">
+						<td><img id="img1" src="immagini/mobo/ogimg-logo.png">
 						<td align="center">Gigabyte Aorus x299
 						<td><select size=1 cols=10>
 							<option selected value=nessuna>
@@ -82,7 +82,7 @@
 						<td align="center">210 <img id="dot" src="immagini/if_record-round-circle-dot_2203520.png">
 						<td><input type="checkbox" size="3" value="false">
 					<tr>
-						<td><img id="giga" src="immagini/mobo/ogimg-logo.png">
+						<td><img id="img2" src="immagini/mobo/ogimg-logo.png">
 						<td align="center">Gigabyte Aorus x470
 						<td><select size=1 cols=10>
 							<option selected value=nessuna>
@@ -95,7 +95,7 @@
 						<td align="center">199,99
 						<td><input type="checkbox" size="3" value="false">
 					<tr>
-						<td><img id="msi" src="immagini/mobo/MSI_logo_for_share2.png">
+						<td><img id="img3" src="immagini/mobo/MSI_logo_for_share2.png">
 						<td align="center">MSI MPG Z390
 						<td><select size=1 cols=10>
 							<option selected value=nessuna>
@@ -108,7 +108,7 @@
 						<td align="center">179 <img id="dot" src="immagini/if_record-round-circle-dot_2203520.png">
 						<td><input type="checkbox" size="3" value="false">
 					<tr>
-						<td><img id="asrock" src="immagini/mobo/asrock-header.jpg">
+						<td><img id="img4" src="immagini/mobo/asrock-header.jpg">
 						<td align="center">AsRock b450m Pro4
 						<td><select size=1 cols=10>
 							<option selected value=nessuna>
@@ -123,17 +123,20 @@
 				</table>
 	
 				<!--<input align="center" type="submit" value="Completa Acquisto" id="submit">-->
-				<button formaction="carrello.html" form="f" id="invia">Completa Ordine</button>
+				<button formaction="carrello.html" form="form" id="invia">Completa Ordine</button>
 				<input type="reset" value="Svuota carrello" id="reset">
 			</form>
-			<br>
-			<br>
+
+			<div id="push"></div>
+			<footer>
+				<img id="paypal" src="immagini/paypalnuovologo-650x245.jpg"><img id="mastercard" src="immagini/mastercard-logo-vecchio.jpg"><img id="visa" src="immagini/visa-logo.png">
+				<p>PcBuilder s.r.l, Via di scalo San Lorenzo, 00185, Roma(RM), Italia</p>
+			</footer>
 		</div>
 
-		<div class="footer">
+		<!--<div class="footer">
 		<img id="paypal" src="immagini/paypalnuovologo-650x245.jpg"><img id="mastercard" src="immagini/mastercard-logo-vecchio.jpg"><img id="visa" src="immagini/visa-logo.png">
-		<p>PcBuilder s.r.l, Via di scalo San Lorenzo, 00185, Roma(RM), Italia</p>
-	</div>
+		<p>PcBuilder s.r.l, Via di scalo San Lorenzo, 00185, Roma(RM), Italia</p>-->
 	</body>
 </html>
 

@@ -1,7 +1,7 @@
 <html>
 	<head>
 		<meta name="author" content="Michele Dilollo, Daniil Girleanu">
-		<link href="./CSS/psu.css" rel="stylesheet" type="text/css">
+		<link href="./CSS/center.css" rel="stylesheet" type="text/css">
 		<link href="./CSS/footer.css" rel="stylesheet" type="text/css">
 		<link href="./CSS/topCat.css" rel="stylesheet" type="text/css">
 		<link href="https://fonts.googleapis.com/css?family=Geo" rel="stylesheet">
@@ -54,8 +54,8 @@
 		<div id="separator">
 		</div>
 
-		<div id="form">
-			<form method="post" action="" id="f">
+		<div>
+			<form method="post" action="" id="form">
 			
 				<table border="0" cellpadding=10 id="table">
 					<tr>
@@ -65,7 +65,7 @@
 						<th>Prezzo (EUR)</th>
 						<th>Acquista</th>
 					<tr>
-						<td><img id="corsair" src="immagini/memorie/index.jpeg">
+						<td><img id="img1" src="immagini/memorie/index.jpeg">
 						<td align="center">Corsair Obsidin 500D
 						<td><select size=1 cols=10>
 							<option selected value=nessuna>
@@ -78,7 +78,7 @@
 						<td align="center">89,99
 						<td><input type="checkbox" size="3" value="false">
 					<tr>
-						<td><img id="tt" src="immagini/psu/cm.jpg">
+						<td><img id="img2" src="immagini/psu/cm.jpg">
 						<td align="center">CoolerMaster MasterBox Lite
 						<td><select size=1 cols=10>
 							<option selected value=nessuna>
@@ -91,7 +91,7 @@
 						<td align="center">49
 						<td><input type="checkbox" size="3" value="false">
 					<tr>
-						<td><img id="cm" src="immagini/psu/thermaltake.jpg">
+						<td><img id="img3" src="immagini/psu/thermaltake.jpg">
 						<td align="center">ThermalTake Versa C23
 						<td><select size=1 cols=10>
 							<option selected value=nessuna>
@@ -104,7 +104,7 @@
 						<td align="center">129,89
 						<td><input type="checkbox" size="3" value="false">
 					<tr>
-						<td><img id="evga" src="immagini/nzxt.jpg">
+						<td><img id="img4" src="immagini/nzxt.jpg">
 						<td align="center">NZXT Noctis 450
 						<td><select size=1 cols=10>
 							<option selected value=nessuna>
@@ -119,16 +119,23 @@
 				</table>
 	
 				<!--<input align="center" type="submit" value="Completa Acquisto" id="submit">-->
-				<button formaction="carrello.html" form="f" id="invia">Completa Ordine</button>
+				<button formaction="carrello.html" form="form" id="invia">Completa Ordine</button>
 				<input type="reset" value="Svuota carrello" id="reset">
 			</form>
 			<br>
 			<br>
+			<div id="push"></div>
+			<footer>
+				<img id="paypal" src="immagini/paypalnuovologo-650x245.jpg"><img id="mastercard" src="immagini/mastercard-logo-vecchio.jpg"><img id="visa" src="immagini/visa-logo.png">
+				<p>PcBuilder s.r.l, Via di scalo San Lorenzo, 00185, Roma(RM), Italia</p>
+			</footer>
 		</div>
-		<div class="footer">
+		<!--<div class="footer">
 			<img id="paypal" src="immagini/paypalnuovologo-650x245.jpg"><img id="mastercard" src="immagini/mastercard-logo-vecchio.jpg"><img id="visa" src="immagini/visa-logo.png">
 			<p>PcBuilder s.r.l, Via di scalo San Lorenzo, 00185, Roma(RM), Italia</p>
-		</div>
+		</div>-->
+		
+		
 	</body>
 </html>
 
