@@ -14,19 +14,18 @@ function iscrizione() {
     var passwordF = document.registrazione.pass.value ;
     var password2F = document.registrazione.pass2.value ;
 
-    console.log(nomeF) ;
-
     if(nomeER.test(nomeF)) {
         if(nomeER.test(cognomeF)) {
             if(eMailER.test(mailF)){
                 if(passwordF != ""){
                     if(passwordF == password2F){
                         var utente = {nome: nomeF , cognome: cognomeF, mail: mailF, password: passwordF};
-                        if(localStorage.getItem("utenti") == null){
-
+                        dbUtentiJSON = localStorage.getItem("utenti");
+                        if(dbUtentiJSON == null){
+                            initDbUtenti(utente);
                         }
                         else{
-
+                            addDbUtente(utente, dbUtentiJSON);
                         }
                     }
                     else {
@@ -48,4 +47,22 @@ function iscrizione() {
     else {
         alert("Formato Nome non corretto");
     }
+}
+
+function initDbUtenti(utente) {
+    var utentiArr = Array[utente] ;
+    var utentiArrJSON = JSON.stringify(utentiArr) ;
+    localStorage.setItem("utenti" , utentiArrJSON) ;
+}
+
+function addDbUtente(utente, dbUtentiJSON) {
+    var dbUtenti = JSON.parse(dbUtentiJSON);
+    for(i = 0, i < dbUtenti.length; i++) {
+        if(dbUteni[i].mail == utente.mail){
+            alert("EMail gia registrata, inserisci una eMail diversa");
+            return ;
+        }
+    }
+    dbUtenti.push(utente);
+    localStorage.setItem(utenti, JSON.stringify(dbUtenti));
 }
