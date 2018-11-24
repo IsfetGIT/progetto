@@ -1,4 +1,4 @@
-var nomeER = /^[a-z]+$/i ;
+var nomeER = /^\w+$/i ;
 var codFiscER = /^[A-Z]{6}\d{2}[A-Z]\d{2}[A-Z]\d{3}[A-Z]$/i ;
 var eMailER = /^.+[@]{1}.+[.]{1}.{2,3}/i ;
 var capER = /^\d{5}/i ;
@@ -50,19 +50,20 @@ function iscrizione() {
 }
 
 function initDbUtenti(utente) {
-    var utentiArr = Array[utente] ;
+    var utentiArr = [] ;
+    utentiArr.push(utente)
     var utentiArrJSON = JSON.stringify(utentiArr) ;
-    localStorage.setItem("utenti" , utentiArrJSON) ;
+    localStorage.setItem("utenti", utentiArrJSON) ;
 }
 
 function addDbUtente(utente, dbUtentiJSON) {
     var dbUtenti = JSON.parse(dbUtentiJSON);
-    for(i = 0, i < dbUtenti.length; i++) {
-        if(dbUteni[i].mail == utente.mail){
+    for(i = 0; i < dbUtenti.length; i++) {
+        if(dbUtenti[i].mail == utente.mail){
             alert("EMail gia registrata, inserisci una eMail diversa");
             return ;
         }
     }
     dbUtenti.push(utente);
-    localStorage.setItem(utenti, JSON.stringify(dbUtenti));
+    localStorage.setItem("utenti", JSON.stringify(dbUtenti));
 }
