@@ -4,13 +4,13 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
+		<script type="application/javascript" src="javascript/logic.js"></script>
 		<meta name="author" content="Michele Dilollo, Daniil Girleanu">
 		<link href="./CSS/contactStyle.css" rel="stylesheet" type="text/css">
 		<link href="./CSS/footer.css" rel="stylesheet" type="text/css">
 		<link href="./CSS/topCat.css" rel="stylesheet" type="text/css">
 		<link href="./CSS/footer.css" rel="stylesheet" type="text/css">
 		<link href="https://fonts.googleapis.com/css?family=Geo" rel="stylesheet">
-		<link rel="shortcut icon" href="favicon.ico" />
 		<link rel="stylesheet" href="./CSS/style.css">
 		<link rel="stylesheet" href="./CSS/left-nav-style.css">
 	</head>
@@ -70,16 +70,16 @@
 			Se non sei ancora registrato clicca <a href="reg.html">qui</a>
 		</b></header>
 		<div>
-			<form id="form" method="post" action="">
+			<form id="form" name="login" method="post" action="">
 				<table id="t" border="0" cellpadding="10" >
 					<tr>
-					<td align="center">ID
-					<td><input type="text" name="ID" maxlength="10" size="15" placeholder="Inserisci ID">
+					<td align="center">eMail
+					<td><input type="text" name="mail" maxlength="30" size="15" placeholder="Inserisci eMail">
 					<td align="center">Password					
 					<td><input type="password" name="pass" maxlength="30" size="15" placeholder="Inserisci Password">
 				</table>	
 					<br>
-					<button formaction="" form="form" id="invia">Entra</button>
+					<button type="button" form="form" id="entra" onclick="loginU()">Entra</button>
 				</div>
 			</form>
 			<br>
