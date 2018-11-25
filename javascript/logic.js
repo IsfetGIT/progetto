@@ -73,7 +73,7 @@ function loginU() {
                 var utenteColl = dbUtenti[i];
                 sessionStorage.setItem("utenteColl", JSON.stringify(utenteColl));
                 alert("Login avvenuto con successo !");
-                //aggiungere reindirizzamento alla pagina dell'utente
+                window.open("./usr.html");
                 return;
             }
         }
