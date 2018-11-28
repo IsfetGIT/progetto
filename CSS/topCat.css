@@ -4,14 +4,6 @@ body {
 	background: white;
 }
 
-
-/*#home{
-	width: 30px;
-	height: 25px;
-	padding-left: 3em;
-	padding-top: 0.5em;
-}*/
-
 #h{
 	padding-top: 0.5em;
     font-family: 'Geo', sans-serif;
@@ -19,18 +11,3 @@ body {
 	font-size: 4em;
 }
 
-/*#head{
-	width: 210px;
-	height: 60px;
-	padding-top: 1em;
-}*/
-
-/*#top{
-	background: #BD3331;
-	width: 100%;
-	color: #dadada;
-	font-family: 'Open Sans', sans-serif;
-	border-radius: 10px 10px 10px 10px;
-	text-align: left;
-	height: 3em;
-}*/
