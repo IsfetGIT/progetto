@@ -80,3 +80,16 @@ function loginU() {
         alert("Credenziali Errate !!!");
     }
 }
+
+function setDatiUtenteColl()  {
+    utente = JSON.parse(sessionStorage.getItem("utenteColl"));
+    document.getElementById("nome").innerHTML = utente.nome;
+    document.getElementById("cognome").innerHTML = utente.cognome;
+    document.getElementById("mail").innerHTML = utente.mail;
+
+    /*document.getElementsByName("nome")[0] = utente.nome;
+    document.getElementsByName("cognome")[0] = utente.cognome;
+    document.getElementsByName("Mail")[0] = utente.mail;
+    */
+
+}
