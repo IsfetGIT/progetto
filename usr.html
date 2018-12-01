@@ -4,6 +4,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="author" content="Michele Dilollo, Daniil Girleanu">
+		<script type="application/javascript" src="javascript/logic.js"></script>
 		<link href="./CSS/contactStyle.css" rel="stylesheet" type="text/css">
 		<link href="https://fonts.googleapis.com/css?family=Geo" rel="stylesheet">
 		<link rel="shortcut icon" href="./immagini/favicon.ico" type="image/x-icon" />
@@ -69,7 +70,7 @@
 			<table id="t" border="0" cellpadding="10">
 				<tr>
 				<td align="center">Nome
-				<td><input type="text" name="nome" maxlength="10" size="30" readonly>
+				<td><input type="text" name="nome" id="nome" maxlength="10" size="30" readonly>
 				<td align="center">Cognome					
 				<td><input type="text" name="cognome" maxlength="10" size="30" readonly>
 				<tr>
@@ -80,10 +81,11 @@
 				<td><input type="password" name="oldPass" maxlength="30" size="30">
 				<td align="center">Nuova Password
 				<td><input type="password" name="newPass" maxlength="20" size="30">
-				<td><button type="button" id="modPass" onclick="">Modifica</button>
+				<td><button type="button" id="modPass">Modifica</button>
 			</table>	
 			</div>
 		</div>
 	</body>
 </html>
+
 
