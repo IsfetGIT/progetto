@@ -4,6 +4,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="author" content="Michele Dilollo, Daniil Girleanu">
+		<script type="application/javascript" src="javascript/logic.js"></script>
 		<link rel="shortcut icon" href="./immagini/favicon.ico" type="image/x-icon" />
 		<link href="./CSS/contactStyle.css" rel="stylesheet" type="text/css">
 		<link href="./CSS/footer.css" rel="stylesheet" type="text/css">
@@ -25,7 +26,7 @@
 			
 			<br>
 			<h2 class="logo">
-				<font size="5"><a href="homepage.html">Home Page</a></font>
+				<font size="5"><a href="index.html">Home Page</a></font>
 			</h2>
 			<br>
 
@@ -52,7 +53,7 @@
 			</ul>
 			<br>
 			<h2 class="logo">
-				<font size="5"><a href="login.html">LogIn</a></font>
+				<font size="5"><a href="login.html">LogIn</a> / <a href="usr.html">Profilo</a></font>
 			</h2>
 		</nav>
 		
@@ -68,12 +69,12 @@
 				<table id="t" border="0" cellpadding="10">
 					<tr>
 						<td align="center">Nome
-						<td><input type="text" name="nome" maxlength="20" size="30" placeholder="inserisci nome">
+						<td><input type="text" id="nome" maxlength="20" size="30" placeholder="inserisci nome">
 						<td align="center">Cognome
-						<td><input type="text" name="cognome" maxlength="20" size="30" placeholder="inserisci cognome">
+						<td><input type="text" id="cognome" maxlength="20" size="30" placeholder="inserisci cognome">
 					<tr>
 						<td align="center">N*
-						<td><input type="text" name="numero" maxlength="20" size="30" placeholder="inserisci numero ordine">
+						<td><input type="text" id="numero" maxlength="20" size="30" placeholder="inserisci numero ordine">
 						<td align="center">Problema
 						<td><select size="1" cols="10" id="select">
 							<option selected value=nessuna>
@@ -86,8 +87,8 @@
 						</select>	
 					<tr>
 						<td align="center">Descrizione
-						<td><textarea rows="6" cols="50"></textarea>
-						<td colspan="2"><input type="radio" value="false">Ho letto e accetto <a href="#win">l'informativa</a>
+						<td><textarea id="testo" rows="6" cols="50"></textarea>
+						<td colspan="2"><input id="info" type="radio" value="false">Ho letto e accetto <a href="#win">l'informativa</a>
 				</table>
 				<input type="submit" value="Invia" id="invia">
 			</form>
