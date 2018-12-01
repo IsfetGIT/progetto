@@ -82,7 +82,7 @@ function loginU() {
 }
 
 function setDatiUtenteColl()  {
-    utente = JSON.parse(sessionStorage.getItem("utenteColl"));
+    var utente = JSON.parse(sessionStorage.getItem("utenteColl"));
     document.getElementById("nome").innerHTML = utente.nome;
     document.getElementById("cognome").innerHTML = utente.cognome;
     document.getElementById("mail").innerHTML = utente.mail;
@@ -92,4 +92,30 @@ function setDatiUtenteColl()  {
     document.getElementsByName("Mail")[0] = utente.mail;
     */
 
+}
+
+
+
+function modificaPassword() {
+    var utente = JSON.parse(sessionStorage.getItem("utenteColl"));
+    var oldPass = document.getElementById("oldPass").value;
+    var newPass = document.getElementById("newPass").value;
+    if(newPass == "" || oldPass != utente.password) alert("Vecchia Password non corretta o nuova password non inserita");
+    else {
+        var dbUtenteJSON = localStorage.getItem("utenti");
+        if (dbUtenteJSON == null) alert("Nessun Utente"); //non deve mai verificarsi
+        else {
+            var dbUtente = JSON.parse(dbUtenteJSON);
+            for(i = 0; i<dbUtente.length; i++) {
+                if(utente.mail == dbUtente[i].mail && oldPass == dbUtente[i].password) {
+                    dbUtente[i].password = newPass;
+                    localStorage.setItem("utenti", JSON.stringify(dbUtente));
+                    alert("Password modificata con successo");
+                    return
+                }
+            }
+            alert("Modifica password non riuscita"); //non deve mai verificarsi
+        }
+        
+    }
 }
