@@ -111,11 +111,19 @@ function modificaPassword() {
                     dbUtente[i].password = newPass;
                     localStorage.setItem("utenti", JSON.stringify(dbUtente));
                     alert("Password modificata con successo");
-                    return
+                    return;
                 }
             }
             alert("Modifica password non riuscita"); //non deve mai verificarsi
         }
         
+    }
+}
+
+function controlloUtenteCollegato() {
+    utenteCollJSON = sessionStorage.getItem("utenteColl");
+    if(utenteCollJSON == null){
+        alert("Effettua il login prima!");
+        location.href = "./login.html";
     }
 }
