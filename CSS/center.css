@@ -23,14 +23,6 @@ form{
 	border-radius: 5px 5px 5px 5px;
 }
 
-#reset{
-	margin: 2em;
-	background: #eef4f2;
-	color: black;
-	font-weight: bold;
-	border-radius: 5px 5px 5px 5px;
-}
-
 #img1{
 	width: 50px;
 	height: 40px;
@@ -59,6 +51,10 @@ form{
 th{
 	border: 2px solid #BD3331;
 	border-radius: 3px 10px 3px 10px;	
+}
+
+td{
+	text-align: center;
 }
 
 
