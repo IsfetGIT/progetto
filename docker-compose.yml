@@ -1,10 +1,24 @@
 ngix:
     image: "nginx"
     volumes:
-      - /root/progettoHTML/progetto:/usr/share/nginx/html
+      - ./:/usr/share/nginx/html
     ports:
       - "8080:80"
       - "4443:443"
     expose:
       - 80
       - 443
+
+node1:
+    image: "node:8"
+    user: "node"
+    working_dir: /home/node
+    environment:
+      - NODE_ENV=production
+    volumes:
+      - ./webApp:/home/node
+    ports:
+      - "8081:8081"
+    expose:
+      - 8081
+    command: "npm start"

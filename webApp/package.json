@@ -1,13 +1,16 @@
 {
-	"name": "docker_web_app",
-	"version": "1.0.0",
-	"description": "Node.js on Docker",
-	"author": "Michele Dilollo, Daniil Girleanu",
-	"main": "server.js",
-	"scripts": {
-		"start": "node server.js"
-	},
-	"dependencies": {
-		"express": "^4.16.1"
-	}
+  "name": "2.-node",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.1",
+    "ip": "^1.1.5",
+    "npm": "^6.4.1",
+    "request": ">= 2.0"
+  }
 }
