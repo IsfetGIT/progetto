@@ -11,21 +11,13 @@ footer{
 	height: 100px;
 }
 
-#divider{
-	height: 10px;
-	background: #000E61;
-	border-radius: 3px 3px 3px 3px;
-	margin-left: 1em;
-	margin-right: 1em;
-}
-
 #paypal {
 	width: 100px;
 	padding-bottom: 0.5em;
 }
 
 #mastercard{
-	width: 100px;
+	width: 200px;
 }
 
 #visa{

@@ -16,7 +16,8 @@ body{
     -webkit-transition: left 0.3s;
     -moz-transition: left 0.3s;
     transition: left 0.3s;
-    background: #BD3331;
+    /*background: #BD3331;*/
+	background: #062f4f;
     z-index: 2000;
     border-radius: 0 5px 5px 0;
 }
@@ -404,7 +405,8 @@ body {
 }
 
 #separator{
-	background: #BD3331;
+	/*background: #BD3331;*/
+	background: #062f4f;
 	border-radius: 5px 5px 5px 5px;
 	margin-left: 1em;
 	margin-right: 1em;

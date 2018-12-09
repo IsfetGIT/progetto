@@ -5,7 +5,7 @@ var eMailER = /^.+[@]{1}.+[.]{1}.{2,3}/i ;
 var capER = /^\d{5}/i ;
 var telER = /^\d{8,}/i ;
 
-var utente = {nome: "Michele", cognome: "Di Lollo", mail: "micheledilollo@gmail.com", password: "alemioamore"};
+//var utente = {nome: "Michele", cognome: "Di Lollo", mail: "micheledilollo@gmail.com", password: "alemioamore"};
 
 
 function iscrizione() {
@@ -128,3 +128,30 @@ function controlloUtenteCollegato() {
         location.href = "./login.html";
     }
 }
+
+const URL = "http:127.0.0.1:5984"
+var dbname = "utente";
+
+
+
+function createDB(){
+	var req = new XMLHttpRequest();	
+	req.open("PUT", URL + "/" + dbname, true);
+	req.setRequestHeader("Content-type", "application/json");
+	
+	req.send();
+	updateDb();
+}
+
+
+	
+function updateDb(){
+	var data = {"nome": document.getElementById("nome").value, "cognome": document.getElementById("cognome").value, "email": document.getElementById("mail").value, "pass": document.getElementById("pass").value};
+	var newData = {"nome": "pippo", "cognome":"pluto"};
+	var docName = data.nome;
+	var req = new XMLHttpRequest();
+	req.open("PUT", URL + '/' + dbname + '/' + docName, true);
+	req.setRequestHeader("Content-type", "application/json");
+	req.send(JSON.stringify(data));
+}
+

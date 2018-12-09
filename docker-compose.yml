@@ -22,3 +22,10 @@ node1:
     expose:
       - 8081
     command: "npm start"
+    
+couchdb:
+    image: couchdb
+    ports:
+      - "5984:5984"
+    expose:
+      - 5984
