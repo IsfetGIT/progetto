@@ -28,6 +28,7 @@ function iscrizione() {
                         else{
                             addDbUtente(utente, dbUtentiJSON);
                         }
+                        alert("Registrazione avvenuta con successo!");
                         location.reload();
                     }
                     else alert("La password di conferma non corrisponde con la password");
@@ -121,11 +122,19 @@ function modificaPassword() {
     }
 }
 
-function controlloUtenteCollegato() {
+function controlloUtenteNonCollegato() {
     utenteCollJSON = sessionStorage.getItem("utenteColl");
     if(utenteCollJSON == null){
         alert("Effettua il login prima!");
         location.href = "./login.html";
+    }
+}
+
+function controlloUtenteCollegato() {
+    utenteCollJSON = sessionStorage.getItem("utenteColl");
+    if(utenteCollJSON != null){
+        alert("Sei gia loggato!");
+        location.href = "./usr.html";
     }
 }
 
