@@ -23,22 +23,7 @@ form{
 	border-radius: 5px 5px 5px 5px;
 }
 
-#img1{
-	width: 50px;
-	height: 40px;
-}
-
-#img2{
-	width: 50px;
-	height: 40px;
-}
-
-#img3{
-	width: 50px;
-	height: 40px;
-}
-
-#img4{
+img.imgOggetti{
 	width: 50px;
 	height: 40px;
 }
