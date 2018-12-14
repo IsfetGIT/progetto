@@ -3,6 +3,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
+		<script type="application/javascript" src="javascript/oggetti.js"></script>>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="author" content="Michele Dilollo, Daniil Girleanu">
@@ -16,6 +17,7 @@
 	</head>
 	<title>Schede Video</title>
 	<body>
+		<script>inizializzaDb()</script>
 		
 		<!--menu a scomparsa-->
 		<input type="checkbox" id="nav-toggle" hidden>
@@ -66,17 +68,17 @@
 		<div id="separator">
 		</div>
 		
-		<div>
+		<div id="divOgg">
 			<form method="post" action="" id="form">
 			
-				<table border="0" cellpadding=10 id="table">
+				<table id="tabellaOggetti" border="0" cellpadding=10 id="table">
 					<tr>
 						<th>Brand</th>
 						<th>Oggetto</th>
 						<th>Numero pezzi</th>
 						<th>Prezzo (EUR)</th>
 						<th>Acquista</th>
-					<tr>
+<!--					<tr>
 						<td><img id="img1" src="immagini/video/slide1_48508f79-7e76-44fc-ac2e-4d510abc27bf-prv.jpg">
 						<td>NVIDIA RTX 2080Ti
 						<td><select size=1 cols=10>
@@ -127,7 +129,7 @@
 							<option value=5>5
 						</select>
 						<td>279,00
-						<td><button form="form" id="invia">Aggiungi al Carrello</button>
+						<td><button form="form" id="invia">Aggiungi al Carrello</button> -->
 				</table>
 			</form>
 			<div id="push"></div>
@@ -139,5 +141,6 @@
 		<!--<div class="footer">
 			<img id="paypal" src="immagini/paypalnuovologo-650x245.jpg"><img id="mastercard" src="immagini/mastercard-logo-vecchio.jpg"><img id="visa" src="immagini/visa-logo.png">
 			<p>PcBuilder s.r.l, Via di scalo San Lorenzo, 00185, Roma(RM), Italia</p>-->
+		<script>setOggetti(dbSchedeVideo)</script>
 	</body>
 </html>
