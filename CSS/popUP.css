@@ -58,7 +58,7 @@
     padding: 0;
     border: 2px solid #ccc;
     border-radius: 15px;
-    background-color: rgba(61, 61, 61, 0.8);
+    background-color: rgba(150, 150, 150, 0.8);
     box-shadow: 0px 0px 10px #000;
     text-decoration: none;
     font: 13px/20px 'Tahoma', Arial, sans-serif;
@@ -66,8 +66,9 @@
     transition: all ease .8s;
 }
 .close:before {
+	padding-top: 0.5em;
     color: rgba(255, 255, 255, 0.9);
-    content: "X";
+    content: url("../immagini/close_popUp.png");
     text-align: center;
     text-shadow: 0 -1px rgba(0, 0, 0, 0.9);
     font-size: 12px;

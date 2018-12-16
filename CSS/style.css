@@ -24,6 +24,11 @@ body {
 	background: white;
 }
 
+input{
+	border-ra: 5px 5px 5px 5px;
+	
+}
+
 #h{
 	padding-top: 0.5em;
     font-family: 'Geo', sans-serif;
