@@ -34,6 +34,12 @@ var dbHardDisk = [{nome: "WD Blue 1TB 7200rpm", prezzo: 45.99 , quantita: 5, img
            {nome: "Drevo x1 series 250gb", prezzo: 40.00 , quantita: 5, img:"immagini/hd/drevo.jpeg"}
           ];
 
+var dbPeriferiche = [{nome:"Logitech Craft Wireless", prezzo: 89.99, quantita:5, img:"immagini/periferiche/logi.jpg"},
+                     {nome:"CoolerMaster MasterKeys L", prezzo: 49.00, quantita:5, img:"immagini/psu/cm.jpg"},
+                     {nome:"Razer DeathAdder Chroma", prezzo: 69.00 , quantita:5, img:"immagini/periferiche/razer.png"},
+                     {nome:"Razer Kraken cuffie Gaming", prezzo: 169.00 , quantita:5, img:"immagini/periferiche/razer.png"}
+                    ]
+
 function inizializzaDb() {
     var dbCasesJSON = localStorage.getItem("dbCases");
     if(dbCasesJSON == null) localStorage.setItem("dbCases", JSON.stringify(dbCases));
@@ -47,6 +53,8 @@ function inizializzaDb() {
     if(dbSchedeVideoJSON == null) localStorage.setItem("dbSchedeVideo", JSON.stringify(dbSchedeVideo));
     var dbHardDiskJSON = localStorage.getItem("dbHardDsik");
     if(dbHardDiskJSON == null ) localStorage.setItem("dbHardDisk", JSON.stringify(dbHardDisk));
+    var dbPerifericheJSON = localStorage.getItem("dbPeriferiche");
+    if(dbPerifericheJSON == null) localStorage.setItem("dbPeriferiche", JSON.stringify(dbPeriferiche));
 }
 
 function setOggetti(database) {
