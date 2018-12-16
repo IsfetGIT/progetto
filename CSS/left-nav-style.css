@@ -302,7 +302,7 @@ body {
     bottom: 0;
     height: 1px;
     width: 100%;
-    background: black;
+    background: #c1ccd3;
     -webkit-transition: width .5s ease;
     transition: width .5s ease;
 }
@@ -313,7 +313,7 @@ body {
  
 .nav > ul > li > a:hover:before {
     width: 0%;
-    background: black;
+    background: #c1ccd3;
     -webkit-transition: width .5s ease;
     transition: width .5s ease;
 }
