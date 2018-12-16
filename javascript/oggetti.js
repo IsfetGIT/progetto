@@ -80,6 +80,7 @@ function setOggetti(database) {
         var tdButton = document.createElement("td");
         var button = document.createElement("button");
         button.setAttribute("value", oggetto);
+        button.setAttribute("onclick", "aggCarrello(this.value)");
         var textButton = document.createTextNode("Aggiungi al Carrello");
         button.appendChild(textButton);
         tdButton.appendChild(button);
