@@ -74,7 +74,7 @@ body{
  
 /**
  * Quando checkbox selezionato, aprire panello 
- * usiamo pseudo-classe :checked
+ * pseudo-classe :checked
  */
  
 [id='nav-toggle']:checked ~ .nav {
@@ -99,7 +99,6 @@ body{
 /*
  * cambio simbolo del bottone interruttore ,
  * solita croce  (MULTIPLICATION X), 
- * potrai utilizare qualsiasi altro simbolo
 */
  
 [id='nav-toggle']:checked ~ .nav > .nav-toggle:after {
@@ -141,7 +140,7 @@ body {
 }
  
 /**
- * Definiamo lo stile del titolo(logo) del panello  
+ *  Stile del titolo(logo) del panello  
 */
  
 .nav h2 {
@@ -187,7 +186,7 @@ body {
 }
  
 /**
- * Decoriamo il menu 
+ * Menu 
  * usando la lista non numerata per le voci
  * aggiungiamo passaggi e trasformazioni 
  */
@@ -220,7 +219,7 @@ body {
     transform: translateX(0);
 }
  
-/* impostiamo intervalli di apparizone dei voci del menu  */
+/* Intervalli di apparizone dei voci del menu  */
  
 .nav > ul > li:nth-child(2) {
     -webkit-transition: opacity .3s .2s, -webkit-transform .3s .2s;
@@ -302,7 +301,7 @@ body {
     bottom: 0;
     height: 1px;
     width: 100%;
-    background: #c1ccd3;
+    background: black;
     -webkit-transition: width .5s ease;
     transition: width .5s ease;
 }
@@ -313,7 +312,7 @@ body {
  
 .nav > ul > li > a:hover:before {
     width: 0%;
-    background: #c1ccd3;
+    background: black;
     -webkit-transition: width .5s ease;
     transition: width .5s ease;
 }
