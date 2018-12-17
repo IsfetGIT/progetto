@@ -93,6 +93,11 @@ function setOggetti(database) {
         var tabella = document.getElementById("table");
         tabella.appendChild(trEl);
     }
+
+}
+
+function setCarrello() {
+    
 }
 
 
