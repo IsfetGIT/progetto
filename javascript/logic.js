@@ -28,7 +28,6 @@ function iscrizione() {
                         else{
                             addDbUtente(utente, dbUtentiJSON);
                         }
-                        alert("Registrazione avvenuta con successo!");
                         location.reload();
                     }
                     else alert("La password di conferma non corrisponde con la password");

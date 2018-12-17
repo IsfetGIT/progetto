@@ -79,8 +79,8 @@ function setOggetti(database) {
         tdPrezzo.appendChild(textPrezzo);
         var tdButton = document.createElement("td");
         var button = document.createElement("button");
-        button.setAttribute("value", oggetto);
-        button.setAttribute("onclick", "aggCarrello(this.value)");
+        button.setAttribute("value", JSON.stringify(oggetto));
+        button.setAttribute("onclick", "aggCarrello(this.value)" );
         var textButton = document.createTextNode("Aggiungi al Carrello");
         button.appendChild(textButton);
         tdButton.appendChild(button);
