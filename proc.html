@@ -1,5 +1,8 @@
+<!DOCTYPE html>
+
 <html>
 	<head>
+		
 		<meta name="author" content="Michele Dilollo, Daniil Girleanu">
 		<script type="application/javascript" src="javascript/oggetti.js"></script>
 		<link rel="shortcut icon" href="./immagini/favicon.ico" type="image/x-icon" />
@@ -10,7 +13,9 @@
 		<link rel="stylesheet" href="./CSS/left-nav-style.css">
 
 	</head>
-	<title>Case</title>
+	
+	<title>Processori</title>
+	
 	<body>
 		
 		<!--menu a scomparsa-->
@@ -31,12 +36,12 @@
 				<font size="5">Prodotti</font> 
 			</h2>
 				<ul>
-					<li><a href="proc.html">Processori</a> 
 					<li><a href="schedeVideo.html">Schede Video</a>
 					<li><a href="mobo.html">Mother Board</a>
 					<li><a href="ram.html">Memorie</a>
 					<li><a href="hd.html">HDD e SSD</a>
 					<li><a href="psu.html">Alimentatori</a>
+					<li><a href="case.html">Case</a>
 					<li><a href="per.html">Periferiche</a> 
 				</ul>
 			<br>
@@ -62,11 +67,11 @@
 		</nav>
 		
 		<!--<img id="head" src="immagini/mobo.png">-->
-		<h1 id="h">Case</h1>
+		<h1 id="h">Processori</h1>
 		
 		<div id="separator">
 		</div>
-
+		
 		<div>
 			<form method="post" action="" id="form">
 			
@@ -78,9 +83,9 @@
 						<th>Prezzo (EUR)</th>
 						<th>Acquista</th>
 					<!--<tr>
-						<td><img id="img1" src="immagini/memorie/index.jpeg">
-						<td>Corsair Obsidin 500D
-						<td><select size=1 cols=10>
+						<td><img id="img1" src="immagini/mobo/ogimg-logo.png">
+						<td id="n1">Gigabyte Aorus x299
+						<td><select id="a" size=1 cols=10>
 							<option selected value=nessuna>
 							<option value=1>1
 							<option value=2>2
@@ -88,12 +93,12 @@
 							<option value=4>4
 							<option value=5>5
 						</select>
-						<td>89,99
+						<td id="p1">210,00 <img id="dot" src="immagini/if_record-round-circle-dot_2203520.png">
 						<td><button form="form" id="invia">Aggiungi al Carrello</button>
 					<tr>
-						<td><img id="img2" src="immagini/psu/cm.jpg">
-						<td>CoolerMaster MasterBox Lite
-						<td><select size=1 cols=10>
+						<td><img id="img2" src="immagini/mobo/ogimg-logo.png">
+						<td id="n2">Gigabyte Aorus x470
+						<td><select id="b" size=1 cols=10>
 							<option selected value=nessuna>
 							<option value=1>1
 							<option value=2>2
@@ -101,12 +106,12 @@
 							<option value=4>4
 							<option value=5>5
 						</select>
-						<td>49,00
+						<td id="p2">199,99
 						<td><button form="form" id="invia">Aggiungi al Carrello</button>
 					<tr>
-						<td><img id="img3" src="immagini/psu/thermaltake.jpg">
-						<td>ThermalTake Versa C23
-						<td><select size=1 cols=10>
+						<td><img id="img3" src="immagini/mobo/MSI_logo_for_share2.png">
+						<td id="n3">MSI MPG Z390
+						<td><select id="c" size=1 cols=10>
 							<option selected value=nessuna>
 							<option value=1>1
 							<option value=2>2
@@ -114,12 +119,12 @@
 							<option value=4>4
 							<option value=5>5
 						</select>
-						<td>129,89
+						<td id="p3">179,00 <img id="dot" src="immagini/if_record-round-circle-dot_2203520.png">
 						<td><button form="form" id="invia">Aggiungi al Carrello</button>
 					<tr>
-						<td><img id="img4" src="immagini/nzxt.jpg">
-						<td>NZXT Noctis 450
-						<td><select size=1 cols=10>
+						<td><img id="img4" src="immagini/mobo/asrock-header.jpg">
+						<td id="n4">AsRock b450m Pro4
+						<td><select id="d" size=1 cols=10>
 							<option selected value=nessuna>
 							<option value=1>1
 							<option value=2>2
@@ -127,7 +132,7 @@
 							<option value=4>4
 							<option value=5>5
 						</select>
-						<td>149,00
+						<td id="p4">79,00
 						<td><button form="form" id="invia">Aggiungi al Carrello</button>-->
 				</table>
 			</form>
@@ -139,13 +144,9 @@
 			</footer>
 		</div>
 		<!--<div class="footer">
-			<img id="paypal" src="immagini/paypalnuovologo-650x245.jpg"><img id="mastercard" src="immagini/mastercard-logo-vecchio.jpg"><img id="visa" src="immagini/visa-logo.png">
-			<p>PcBuilder s.r.l, Via di scalo San Lorenzo, 00185, Roma(RM), Italia</p>
-		</div>-->
-		<script>setOggetti("dbCases")</script>
-		
-		
+		<img id="paypal" src="immagini/paypalnuovologo-650x245.jpg"><img id="mastercard" src="immagini/mastercard-logo-vecchio.jpg"><img id="visa" src="immagini/visa-logo.png">
+		<p>PcBuilder s.r.l, Via di scalo San Lorenzo, 00185, Roma(RM), Italia</p>-->
+		<script>setOggetti("dbMobo")</script>
 	</body>
 </html>
-
 
