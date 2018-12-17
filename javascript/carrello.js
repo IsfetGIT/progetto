@@ -34,3 +34,8 @@ function aggCarrello(oggetto) {
     }
 
 }
+
+function setCarrello() {
+    
+    
+}

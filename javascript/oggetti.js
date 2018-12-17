@@ -38,7 +38,13 @@ var dbPeriferiche = [{nome:"Logitech Craft Wireless", prezzo: 89.99, quantita:5,
                      {nome:"CoolerMaster MasterKeys L", prezzo: 49.00, quantita:5, img:"immagini/psu/cm.jpg"},
                      {nome:"Razer DeathAdder Chroma", prezzo: 69.00 , quantita:5, img:"immagini/periferiche/razer.png"},
                      {nome:"Razer Kraken cuffie Gaming", prezzo: 169.00 , quantita:5, img:"immagini/periferiche/razer.png"}
-                    ]
+                    ];
+
+var dbProcessori = [{nome:"p", prezzo: 1 , quantita: 5, img:""},
+                    {nome:"p", prezzo: 1, quantita: 5, img:""},
+                    {nome:"p", prezzo: 1 , quantita:5, img:""},
+                    {nome:"p", prezzo: 1 , quantita:5, img:""}
+                    ];
 
 function inizializzaDb() {
     var dbCasesJSON = localStorage.getItem("dbCases");
@@ -55,6 +61,8 @@ function inizializzaDb() {
     if(dbHardDiskJSON == null ) localStorage.setItem("dbHardDisk", JSON.stringify(dbHardDisk));
     var dbPerifericheJSON = localStorage.getItem("dbPeriferiche");
     if(dbPerifericheJSON == null) localStorage.setItem("dbPeriferiche", JSON.stringify(dbPeriferiche));
+    var dbProcessoriJSON = localStorage.getItem("dbProcessori");
+    if(dbProcessoriJSON  == null) localStorage.setItem("dbProcessori", JSON.stringify(dbProcessori));
 }
 
 function setOggetti(database) {
@@ -94,10 +102,6 @@ function setOggetti(database) {
         tabella.appendChild(trEl);
     }
 
-}
-
-function setCarrello() {
-    
 }
 
 
