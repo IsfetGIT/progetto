@@ -92,6 +92,4 @@ function setCarrello() {
         }
     }
     "Nessun elemento nel carrello";
-
-    
 }
