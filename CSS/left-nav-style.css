@@ -348,6 +348,15 @@ body {
 }
 */
 
+
+#logout{
+	position: absolute;
+	border: 0;;
+	background: #BD3331;
+	bottom: 1em;
+	right: 1em;
+}
+
 #logo{
 	padding-left: 5em;
 	width: 300px;
