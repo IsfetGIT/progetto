@@ -40,6 +40,7 @@ function iscrizione() {
         else  alert("Formato Cognome non corretto");
     }
     else alert("Formato Nome non corretto");
+	location.href = "./login.html"
 }
 
 function initDbUtenti(utente) {
@@ -136,4 +137,3 @@ function controlloUtenteCollegato() {
         location.href = "./usr.html";
     }
 }
-
