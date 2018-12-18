@@ -1,3 +1,11 @@
+/* File epr la gestione dei db degli oggetti
+ * La funzione inizializzaDb() viene chiamta dal file index.html
+ * i db quindi vengono inizializzati solo quando viene aperta la homePage.
+ * Le tabelle che contengono i prodotti nelle varie categorie vengono popolate da file js. 
+ */
+
+
+
 var dbCases = [{nome: "Corsair Obsidian 500D", prezzo: 89.99, quantita: 5, img: "immagini/memorie/index.jpeg" },
              {nome: "CoolerMaster MasterBox Lite", prezzo: 49.00, quantita: 5, img: "immagini/psu/cm.jpg" },
              {nome: "ThermalTake Versa C23", prezzo: 129.89, quantita:5, img: "immagini/psu/thermaltake.jpg" },
@@ -40,10 +48,10 @@ var dbPeriferiche = [{nome:"Logitech Craft Wireless", prezzo: 89.99, quantita:5,
                      {nome:"Razer Kraken cuffie Gaming", prezzo: 169.00 , quantita:5, img:"immagini/periferiche/razer.png"}
                     ];
 
-var dbProcessori = [{nome:"p", prezzo: 1 , quantita: 5, img:""},
-                    {nome:"p", prezzo: 1, quantita: 5, img:""},
-                    {nome:"p", prezzo: 1 , quantita:5, img:""},
-                    {nome:"p", prezzo: 1 , quantita:5, img:""}
+var dbProcessori = [{nome:"Intel Core i5-8600k", prezzo: 282.00 , quantita: 5, img:"immagini/proc/intel.png"},
+                    {nome:"intel core i7-8700", prezzo: 364.17, quantita: 5, img:"immagini/proc/intel.png"},
+                    {nome:"Amd Ryzen5 2600", prezzo: 186.85 , quantita:5, img:"immagini/proc/amd-logo.png"},
+                    {nome:"Amd Ryzen7 2700", prezzo: 323.46 , quantita:5, img:"immagini/proc/amd-logo.png"}
                     ];
 
 function inizializzaDb() {
@@ -100,6 +108,7 @@ function setOggetti(database) {
         trEl.appendChild(tdButton);
         var tabella = document.getElementById("table");
         tabella.appendChild(trEl);
+		
     }
 
 }

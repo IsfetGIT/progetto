@@ -10,6 +10,10 @@ form{
 	margin-right: auto;
 }
 
+#cart{
+	paddint-top: 1em;
+}
+
 #shop{
     padding-top: 0.3em;
 	width: 30px;
