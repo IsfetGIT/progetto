@@ -39,12 +39,17 @@ function setCarrello() {
     var utenteCollJSON = sessionStorage.getItem("utenteColl");
     if(utenteCollJSON == null){
         alert("Devi prima accedere per visualizzare il carrello");
+        location.href = "./login.html";
         return;
     }
     var utenteColl = JSON.parse(utenteCollJSON);
     var carrelloJSON = localStorage.getItem("carrello");
     if(carrelloJSON == null){
-        "Non hai nessun elemento nel carrello";
+        var tabella = document.getElementById("table");
+        var tr = document.createElement("tr");
+        var trText = document.createTextNode("Non hai nessun elemento nel carrello");
+        tr.appendChild(trText);
+        tabella.appendChild(tr);
         return;
     }
     var carrello = JSON.parse(carrelloJSON);
@@ -55,7 +60,9 @@ function setCarrello() {
                 var oggettoC = carrello[i].oggettiCarrello[t];
                 var oggetto = oggettoC.valore;
                 var quantita = oggettoC.numero;
-                prezzoTot += oggetto.prezzo;
+
+                prezzoTot += (oggetto.prezzo * quantita);
+
                 var trEl = document.createElement("tr");
                 var tdimgEl = document.createElement("td");
                 var imgEl = document.createElement("img");
@@ -87,9 +94,22 @@ function setCarrello() {
                 var tabella = document.getElementById("table");
                 tabella.appendChild(trEl);
             }
-            "Stampa il prezzo totale";
+            var trPrezzo = document.createElement("tr");
+            var tdPrezzo = document.createElement("td");
+            tdPrezzo.setAttribute("colspan", "5");
+            var textPrezzo = document.createTextNode("Prezzo totale: "+prezzoTot+" €");
+            tdPrezzo.appendChild(textPrezzo);
+            trPrezzo.appendChild(tdPrezzo);
+            var tabella = document.getElementById("table");
+            tabella.appendChild(trPrezzo);
+
             return;
         }
     }
-    "Nessun elemento nel carrello";
+    var tabella = document.getElementById("table");
+    var tr = document.createElement("tr");
+    var trText = document.createTextNode("Non hai nessun elemento nel carrello");
+    tr.appendChild(trText);
+    tabella.appendChild(tr);
+    return;
 }

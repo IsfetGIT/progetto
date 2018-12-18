@@ -137,29 +137,4 @@ function controlloUtenteCollegato() {
     }
 }
 
-const URL = "http:127.0.0.1:5984"
-var dbname = "utente";
-
-
-
-function createDB(){
-	var req = new XMLHttpRequest();	
-	req.open("PUT", URL + "/" + dbname, true);
-	req.setRequestHeader("Content-type", "application/json");
-	
-	req.send();
-	updateDb();
-}
-
-
-	
-function updateDb(){
-	var data = {"nome": document.getElementById("nome").value, "cognome": document.getElementById("cognome").value, "email": document.getElementById("mail").value, "pass": document.getElementById("pass").value};
-	var newData = {"nome": "pippo", "cognome":"pluto"};
-	var docName = data.nome;
-	var req = new XMLHttpRequest();
-	req.open("PUT", URL + '/' + dbname + '/' + docName, true);
-	req.setRequestHeader("Content-type", "application/json");
-	req.send(JSON.stringify(data));
-}
 
