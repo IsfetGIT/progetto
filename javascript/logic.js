@@ -142,6 +142,15 @@ function controlloUtenteCollegato() {
     }
 }
 
+function logout() {
+    var utenteCollJSON = sessionStorage.getItem("utenteColl");
+    if(utenteCollJSON == null) alert("Non sei loggato");
+    else{
+        sessionStorage.removeItem("utenteColl");
+        location.href = "./login.html";
+    }
+}
+
 function controlloPagamento() {
     var nomeF = document.pagamento.nome.value ;
     var cognomeF = document.pagamento.cognome.value ;
@@ -170,10 +179,10 @@ function controlloAcquisto() {
     var utenteColl = JSON.parse(sessionStorage.getItem("utenteColl"));
     var carrelloJSON = localStorage.getItem("carrello");
     var databaseOggetti = ["dbCases", "dbMobo", "dbRam", "dbPsu", "dbSchedeVideo", "dbProcessori", "dbHardDisk", "dbPeriferiche"];
-    var databaseAggiornati = [];
 
     if(carrelloJSON == null){
         alert("Nessun elemento nel carrello!");
+        return;
     }
     var carrello = JSON.parse(carrelloJSON);
 
