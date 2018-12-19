@@ -202,12 +202,32 @@ function controlloAcquisto() {
                                 alert("Quantita di "+oggetto.nome+" troppo elevata rispetto le nostre scorte!");
                                 return;
                             }
+                            console.log(oggetto.nome);
+                        
                         }
                     }
                 }
 
             }
+            scalaDatabase(oggettiCarrello, databaseOggetti);
             alert("Acquisto completato con successo!");
+            return;
+        }
+    }
+}
+
+function scalaDatabase(oggettiCarrello, databaseOggetti) {
+    for(o = 0; o < oggettiCarrello.length; o++){
+        var oggetto = oggettiCarrello[o].valore;
+        var numero = oggettiCarrello[o].numero;
+        for(d = 0 ; d < databaseOggetti.length; d++){
+            var database = JSON.parse(localStorage.getItem(databaseOggetti[d]));
+            for(v = 0; v < database.length; v++){
+                if(database[v].nome == oggetto.nome) {
+                    database[v].quantita -= numero;
+                }
+            }
+            localStorage.setItem(databaseOggetti[d], JSON.stringify(database));
         }
     }
 }
