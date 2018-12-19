@@ -5,6 +5,7 @@
 		<meta charset="utf-8" />
 		<meta name="author" content="Michele Dilollo, Daniil Girleanu">
 		<script type="application/javascript" src="javascript/carrello.js"></script>
+		<script type="application/javascript" src="javascript/logic.js"></script>
 		<link rel="shortcut icon" href="./immagini/favicon.ico" type="image/x-icon" />
 		<link href="./CSS/contactStyle.css" rel="stylesheet" type="text/css">
 		<link href="./CSS/footer.css" rel="stylesheet" type="text/css">
@@ -81,7 +82,7 @@
 		</b></div>
 		<hr>
 		<div>
-			<form id="form" method="post" action="">
+			<form id="form" name="pagamento" method="post" action="">
 				<table id="t" border="0" cellpadding="10" >
 					<tr>
 					<td align="center"><strong>Nome</strong>
@@ -102,7 +103,7 @@
 					<tr>
 				</table>
 				<div align="center">
-					<input type="radio" value="false">Ho letto e accetto <a href="#win"><b>l'informativa</b></a>
+					<input type="radio" id="informativa" value="false">Ho letto e accetto <a href="#win"><b>l'informativa</b></a>
 					<a href="#x" class="overlay" id="win"></a>
 					<div class="popup">
 						<header>
@@ -148,7 +149,7 @@
 					</div>	
 					<br>
 					<br>
-					<button form="form" id="invia"><img id="shop" src="immagini/cart.png"></button>
+					<button form="form" id="invia" onclick="controlloPagamento()"><img id="shop" src="immagini/cart.png"></button>
 					<button form="form" id="invia"><img id="shop" src="immagini/resetShop.png"></button>
 				</div>
 			</form>

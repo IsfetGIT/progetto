@@ -76,7 +76,7 @@ function setCarrello() {
                 var textNum = document.createTextNode(quantita);
                 tdNum.appendChild(textNum);
                 var tdPrezzo = document.createElement("td");
-                var textPrezzo = document.createTextNode(oggetto.prezzo);
+                var textPrezzo = document.createTextNode(oggetto.prezzo + " €");
                 tdPrezzo.appendChild(textPrezzo);
                 var tdButton = document.createElement("td");
                 var button = document.createElement("button");
@@ -112,4 +112,25 @@ function setCarrello() {
     tr.appendChild(trText);
     tabella.appendChild(tr);
     return;
+}
+
+function rimuovi(oggettoJSON) {
+    var oggetto = JSON.parse(oggettoJSON);
+    var carrello = JSON.parse(localStorage.getItem("carrello"));
+    var utenteColl = JSON.parse(sessionStorage.getItem("utenteColl"));
+    for(i = 0; i < carrello.length; i++) {
+        if(utenteColl.mail == carrello[i].mail){
+            for(t = 0; t < carrello[i].oggettiCarrello.length; t++ ){
+                if(oggetto.nome == carrello[i].oggettiCarrello[t].valore.nome) {
+                    if (carrello[i].oggettiCarrello[t].numero > 1) carrello[i].oggettiCarrello[t].numero -=1 ;
+                    else {
+                        carrello[i].oggettiCarrello.splice(t,1) ;
+                    }
+                    localStorage.setItem("carrello", JSON.stringify(carrello));
+                    location.reload();
+                    return;
+                }
+            }
+        }
+    }
 }

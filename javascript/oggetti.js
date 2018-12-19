@@ -91,7 +91,7 @@ function setOggetti(database) {
         var textNum = document.createTextNode(oggetto.quantita);
         tdNum.appendChild(textNum);
         var tdPrezzo = document.createElement("td");
-        var textPrezzo = document.createTextNode(oggetto.prezzo);
+        var textPrezzo = document.createTextNode(oggetto.prezzo + " €");
         tdPrezzo.appendChild(textPrezzo);
         var tdButton = document.createElement("td");
         var button = document.createElement("button");

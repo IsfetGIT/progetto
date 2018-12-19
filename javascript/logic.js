@@ -4,6 +4,10 @@ var codFiscER = /^[A-Z]{6}\d{2}[A-Z]\d{2}[A-Z]\d{3}[A-Z]$/i ;
 var eMailER = /^.+[@]{1}.+[.]{1}.{2,3}/i ;
 var capER = /^\d{5}/i ;
 var telER = /^\d{8,}/i ;
+var cartaER = /^\d{16}/i ;
+var cvvER = /^\d{3}/i ;
+var capER = /^\d{5}/i ;
+var meseAnnoER = /^\d{2}[/]{1}\d{2}/i
 
 //var utente = {nome: "Michele", cognome: "Di Lollo", mail: "micheledilollo@gmail.com", password: "alemioamore"};
 
@@ -135,5 +139,66 @@ function controlloUtenteCollegato() {
     if(utenteCollJSON != null){
         alert("Sei gia loggato!");
         location.href = "./usr.html";
+    }
+}
+
+function controlloPagamento() {
+    var nomeF = document.pagamento.nome.value ;
+    var cognomeF = document.pagamento.cognome.value ;
+    var viaF = document.pagamento.via.value ;
+    var cittaF = document.pagamento.citt.value ;
+    var capF = document.pagamento.cap.value ;
+    var cardF = document.pagamento.card.value;
+    var scadeF = document.pagamento.scade.value;
+    var secureF = document.pagamento.secure.value;
+    var informativa = document.getElementById("informativa").value;
+
+    if(!nomeER.test(nomeF)) alert("Inserire un nome valido!");
+    else if(!nomeER.test(cognomeF)) alert("Inserire un cognome valido!");
+    else if(viaF == "") alert("Inserire un indirizzo valido");
+    else if(!capER.test(capF)) alert("Inserire un cap valido");
+    else if(!cartaER.test(cardF)) alert("Inserire una carta valida!");
+    else if(!meseAnnoER.test(scadeF)) alert("Inserire una scadenza corretta!");
+    else if(!cvvER.test(secureF)) alert("Inserire un codice valido!");
+    else if(informativa == false) alert("Bisogna accettare l'informativa!");
+    else {
+        controlloAcquisto();
+    }
+}
+
+function controlloAcquisto() {
+    var utenteColl = JSON.parse(sessionStorage.getItem("utenteColl"));
+    var carrelloJSON = localStorage.getItem("carrello");
+    var databaseOggetti = ["dbCases", "dbMobo", "dbRam", "dbPsu", "dbSchedeVideo", "dbProcessori", "dbHardDisk", "dbPeriferiche"];
+    var databaseAggiornati = [];
+
+    if(carrelloJSON == null){
+        alert("Nessun elemento nel carrello!");
+    }
+    var carrello = JSON.parse(carrelloJSON);
+
+    var controllo = 0;
+
+    for(i = 0; i<carrello.length; i++) {
+        if(carrello[i].mail == utenteColl.mail) {
+            var oggettiCarrello = carrello[i].oggettiCarrello;
+            for(o = 0; o < oggettiCarrello.length; o++){
+                var oggetto = oggettiCarrello[o].valore;
+                var numero = oggettiCarrello[o].numero;
+                for(d = 0 ; d < databaseOggetti.length; d++){
+                    var database = JSON.parse(localStorage.getItem(databaseOggetti[d]));
+                    for(v = 0; v < database.length; v++){
+                        if(database[v].nome == oggetto.nome) {
+                            if(numero > database[v].quantita) { 
+                                alert("Quantita di "+oggetto.nome+" troppo elevata rispetto le nostre scorte!");
+                                return;
+                            }
+                        }
+                    }
+                }
+
+            }
+            alert("Acquisto completato con successo!");
+        }
     }
 }
