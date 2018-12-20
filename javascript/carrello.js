@@ -143,20 +143,3 @@ function rimuovi(oggettoJSON) {
     }
 }
 
-function azzeraCarrelloUtente() {
-    var utenteColl = JSON.parse(sessionStorage.getItem("utenteColl"));
-    var carrelloJSON = localStorage.getItem("carrello");
-    if(carrelloJSON == null) return;
-    else{
-        var carrello = JSON.parse(carrelloJSON);
-        for(i = 0; i < carrello.length; i++) {
-            if(utenteColl.mail == carrello[i].mail){
-                carrello.splice(i,1);
-                if(carrello.length > 0) localStorage.setItem("carrello", JSON.stringify(carrello));
-                else localStorage.removeItem("carrello");
-                location.reload();
-                return;
-            }
-        }
-    }
-}
