@@ -9,6 +9,8 @@ var cvvER = /^\d{3}/i ;
 var capER = /^\d{5}/i ;
 var meseAnnoER = /^\d{2}[/]{1}\d{2}/i
 
+var ordineER = /^\d{24}/i
+
 //var utente = {nome: "Michele", cognome: "Di Lollo", mail: "micheledilollo@gmail.com", password: "alemioamore"};
 
 
@@ -79,7 +81,7 @@ function loginU() {
                 var utenteColl = dbUtenti[i];
                 sessionStorage.setItem("utenteColl", JSON.stringify(utenteColl));
                 alert("Login avvenuto con successo !");
-                window.open("./usr.html");
+                location.href = "./usr.html";
                 return;
             }
         }
@@ -160,7 +162,7 @@ function controlloPagamento() {
     var cardF = document.pagamento.card.value;
     var scadeF = document.pagamento.scade.value;
     var secureF = document.pagamento.secure.value;
-    var informativa = document.getElementById("informativa").value;
+    var informativa = document.getElementById("informativa").checked;
 
     if(!nomeER.test(nomeF)) alert("Inserire un nome valido!");
     else if(!nomeER.test(cognomeF)) alert("Inserire un cognome valido!");
@@ -230,4 +232,26 @@ function scalaDatabase(oggettiCarrello, databaseOggetti) {
             localStorage.setItem(databaseOggetti[d], JSON.stringify(database));
         }
     }
+}
+
+function controlloReclamo() {
+    var nomeF = document.getElementById("nome").value ;
+    var cognomeF = document.getElementById("cognome").value ;
+    var mailF = document.getElementById("mail").value ;
+    var ordineF = document.getElementById("numero").value ;
+    var problemaF= document.getElementById("select").value ;
+    var testoF = document.getElementById("testo").value ;
+    var informativaF= document.getElementById("info").checked ;
+    if(!nomeER.test(nomeF)) alert("Inserire nome valido");
+    else if(!nomeER.test(cognomeF)) alert("Inserire cognome valido");
+    else if(!eMailER.test(mailF)) alert("Inserire eMail valida");
+    else if(!ordineER.test(ordineF)) alert("Inserire ordine valido");
+    else if(problemaF == "null") alert("Selezionare problema");
+    else if(testoF == "") alert("Descrivere il problema");
+    else if(informativaF == false) alert("Accettare la informativa");
+    else {
+        alert("Richiesta inviata con successo!");
+        location.reload();
+    } 
+
 }

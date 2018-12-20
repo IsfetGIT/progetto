@@ -124,12 +124,38 @@ function rimuovi(oggettoJSON) {
                 if(oggetto.nome == carrello[i].oggettiCarrello[t].valore.nome) {
                     if (carrello[i].oggettiCarrello[t].numero > 1) carrello[i].oggettiCarrello[t].numero -=1 ;
                     else {
-                        carrello[i].oggettiCarrello.splice(t,1) ;
+                        if(carrello[i].oggettiCarrello.length > 1)carrello[i].oggettiCarrello.splice(t,1) ;
+                        else if (carrello.length > 1) {
+                            carrello.splice(i,1);
+                        }
+                        else {
+                            localStorage.removeItem("carrello");
+                            location.reload();
+                            return;
+                        }
                     }
                     localStorage.setItem("carrello", JSON.stringify(carrello));
                     location.reload();
                     return;
                 }
+            }
+        }
+    }
+}
+
+function azzeraCarrelloUtente() {
+    var utenteColl = JSON.parse(sessionStorage.getItem("utenteColl"));
+    var carrelloJSON = localStorage.getItem("carrello");
+    if(carrelloJSON == null) return;
+    else{
+        var carrello = JSON.parse(carrelloJSON);
+        for(i = 0; i < carrello.length; i++) {
+            if(utenteColl.mail == carrello[i].mail){
+                carrello.splice(i,1);
+                if(carrello.length > 0) localStorage.setItem("carrello", JSON.stringify(carrello));
+                else localStorage.removeItem("carrello");
+                location.reload();
+                return;
             }
         }
     }

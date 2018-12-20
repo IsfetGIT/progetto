@@ -88,10 +88,10 @@
 						<td>
 					<tr>
 						<td align="center">N*
-						<td><input type="text" id="numero" maxlength="20" size="30" placeholder="inserisci numero ordine">
+						<td><input type="text" id="numero" maxlength="24" size="30" placeholder="inserisci numero ordine">
 						<td align="center">Problema
 						<td><select size="1" cols="10" id="select">
-							<option selected value=nessuna>
+							<option selected value= "null">
 							<option value="Spedizione">Spedizione
 							<option value="Prodotto danneggiato">Prodotto danneggiato
 							<option value="Richiesta reso">Richiesta reso
@@ -104,7 +104,7 @@
 						<td><textarea id="testo" rows="6" cols="50"></textarea>
 						<td colspan="2"><input id="info" type="radio" value="false">Ho letto e accetto <a href="#win"><b>l'informativa</b></a>
 				</table>
-				<input type="submit" value="Invia" id="invia">
+				<input type="submit" value="Invia" id="invia" onclick="controlloReclamo()">
 			</form>
 			<a href="#x" class="overlay" id="win"></a>
 				<div class="popup">
