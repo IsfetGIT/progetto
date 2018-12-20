@@ -97,7 +97,7 @@ function setCarrello() {
             var trPrezzo = document.createElement("tr");
             var tdPrezzo = document.createElement("td");
             tdPrezzo.setAttribute("colspan", "5");
-            var textPrezzo = document.createTextNode("Prezzo totale: "+prezzoTot+" €");
+            var textPrezzo = document.createTextNode("Prezzo totale: "+prezzoTot.toFixed(2)+" €");
             tdPrezzo.appendChild(textPrezzo);
             trPrezzo.appendChild(tdPrezzo);
             var tabella = document.getElementById("table");
