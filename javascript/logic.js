@@ -34,7 +34,7 @@ function iscrizione() {
                         else{
                             addDbUtente(utente, dbUtentiJSON);
                         }
-                        location.reload();
+                        location.href = "./login.html";
                     }
                     else alert("La password di conferma non corrisponde con la password");
                 }
@@ -46,7 +46,7 @@ function iscrizione() {
         else  alert("Formato Cognome non corretto");
     }
     else alert("Formato Nome non corretto");
-	location.href = "./login.html"
+	//location.href = "./login.html"
 }
 
 function initDbUtenti(utente) {
@@ -212,6 +212,7 @@ function controlloAcquisto() {
 
             }
             scalaDatabase(oggettiCarrello, databaseOggetti);
+            azzeraCarrelloUtente();
             alert("Acquisto completato con successo!");
             return;
         }
@@ -254,4 +255,22 @@ function controlloReclamo() {
         location.reload();
     } 
 
+}
+
+function azzeraCarrelloUtente() {
+    var utenteColl = JSON.parse(sessionStorage.getItem("utenteColl"));
+    var carrelloJSON = localStorage.getItem("carrello");
+    if(carrelloJSON == null) return;
+    else{
+        var carrello = JSON.parse(carrelloJSON);
+        for(i = 0; i < carrello.length; i++) {
+            if(utenteColl.mail == carrello[i].mail){
+                carrello.splice(i,1);
+                if(carrello.length > 0) localStorage.setItem("carrello", JSON.stringify(carrello));
+                else localStorage.removeItem("carrello");
+                location.reload();
+                return;
+            }
+        }
+    }
 }
