@@ -34,6 +34,7 @@ function iscrizione() {
                         else{
                             addDbUtente(utente, dbUtentiJSON);
                         }
+                        alert("Registrazione avvenuta con successo!");
                         location.href = "./login.html";
                     }
                     else alert("La password di conferma non corrisponde con la password");
@@ -66,7 +67,6 @@ function addDbUtente(utente, dbUtentiJSON) {
     }
     dbUtenti.push(utente);
     localStorage.setItem("utenti", JSON.stringify(dbUtenti));
-    alert("Registrazione avvenuta con successo!\nRecarsi alla pagina di Login per accedere")
 }
 
 function loginU() {
@@ -173,7 +173,33 @@ function controlloPagamento() {
     else if(!cvvER.test(secureF)) alert("Inserire un codice valido!");
     else if(informativa == false) alert("Bisogna accettare l'informativa!");
     else {
-        controlloAcquisto();
+        var oggettiCarrello = controlloAcquisto();
+        if(oggettiCarrello != -1){
+            var personaOrd = {nome: nomeF, cognome: cognomeF};
+            var cartaOrd = {numero: cardF, scadenza: scadeF, cvv: secureF};
+            var indirizzoOrd = {vai: viaF, citta: cittaF, cap: capF};
+            var data = new Date();
+            var numeroOggetti = oggettiCarrello.length.toString();
+            var anno = data.getFullYear().toString();
+            var mese = (data.getMonth() +1).toString();
+            var giorno = data.getDay().toString() ;
+            var ora = data.getHours().toString() ;
+            var minuto = data.getMinutes().toString() ;
+            var idOrdineS = minuto + ora + giorno + mese + anno + numeroOggetti + personaOrd.nome.charAt(0)
+                            + personaOrd.cognome.charAt(0) + "PB";
+            console.log(idOrdineS);
+            var ordineUtente = {persona: personaOrd, carta: cartaOrd, indirizzo: indirizzoOrd, data: data, oggetti: oggettiCarrello, idOrdine: idOrdineS };
+            var ordiniJSON = localStorage.getItem("ordini");
+            if( ordiniJSON == null) {
+                localStorage.setItem("ordini", JSON.stringify([ordineUtente]));
+            }
+            else {
+                var ordini = JSON.parse(ordiniJSON);
+                ordini.push(ordineUtente);
+                localStorage.setItem("ordini", JSON.stringify(ordini));
+            }
+            
+        }
     }
 }
 
@@ -202,9 +228,9 @@ function controlloAcquisto() {
                         if(database[v].nome == oggetto.nome) {
                             if(numero > database[v].quantita) { 
                                 alert("Quantita di "+oggetto.nome+" troppo elevata rispetto le nostre scorte!");
-                                return;
+                                return -1;
                             }
-                            console.log(oggetto.nome);
+                            //console.log(oggetto.nome);
                         
                         }
                     }
@@ -214,7 +240,7 @@ function controlloAcquisto() {
             scalaDatabase(oggettiCarrello, databaseOggetti);
             azzeraCarrelloUtente();
             alert("Acquisto completato con successo!");
-            return;
+            return oggettiCarrello;
         }
     }
 }
