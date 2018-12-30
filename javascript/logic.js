@@ -9,7 +9,7 @@ var cvvER = /^\d{3}/i ;
 var capER = /^\d{5}/i ;
 var meseAnnoER = /^\d{2}[/]{1}\d{2}/i
 
-var ordineER = /^\d{24}/i
+var ordineER = /^\d+[A-Z]{2}[P]{1}[B]{1}/i
 
 //var utente = {nome: "Michele", cognome: "Di Lollo", mail: "micheledilollo@gmail.com", password: "alemioamore"};
 
@@ -182,12 +182,12 @@ function controlloPagamento() {
             var numeroOggetti = oggettiCarrello.length.toString();
             var anno = data.getFullYear().toString();
             var mese = (data.getMonth() +1).toString();
-            var giorno = data.getDay().toString() ;
+            var giorno = data.getDate().toString() ;
             var ora = data.getHours().toString() ;
             var minuto = data.getMinutes().toString() ;
             var idOrdineS = minuto + ora + giorno + mese + anno + numeroOggetti + personaOrd.nome.charAt(0)
                             + personaOrd.cognome.charAt(0) + "PB";
-            console.log(idOrdineS);
+            //console.log(idOrdineS);
             var ordineUtente = {persona: personaOrd, carta: cartaOrd, indirizzo: indirizzoOrd, data: data, oggetti: oggettiCarrello, idOrdine: idOrdineS };
             var ordiniJSON = localStorage.getItem("ordini");
             if( ordiniJSON == null) {
@@ -277,6 +277,7 @@ function controlloReclamo() {
     else if(testoF == "") alert("Descrivere il problema");
     else if(informativaF == false) alert("Accettare la informativa");
     else {
+        
         alert("Richiesta inviata con successo!");
         location.reload();
     } 
