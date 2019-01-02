@@ -277,9 +277,13 @@ function controlloReclamo() {
     else if(testoF == "") alert("Descrivere il problema");
     else if(informativaF == false) alert("Accettare la informativa");
     else {
-        
-        alert("Richiesta inviata con successo!");
-        location.reload();
+        if(controlloOrdine(ordineF)){
+            alert("Richiesta inviata con successo!");
+            location.reload();
+        }
+        else {
+            alert("L'ordine non è presente nei nostri database!")
+        }
     } 
 
 }
@@ -299,5 +303,19 @@ function azzeraCarrelloUtente() {
                 return;
             }
         }
+    }
+}
+
+function controlloOrdine(numero) {
+    var ordineJSON = localStorage.getItem("ordini");
+    if(ordineJSON == null) {
+        return false
+    }
+    else {
+        var ordine = JSON.parse(ordineJSON);
+        for(i = 0; i<ordine.length; i++){
+            if(ordine[i].idOrdine == numero) return true
+        }
+        return false
     }
 }
