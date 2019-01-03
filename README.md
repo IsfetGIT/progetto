@@ -1,5 +1,2 @@
-# DANIIL FAI IL BRAVO SU, SCRIVI <3
- 
-1 SO CHE STAI LEGGENDO
- 
-2 SE FACCIAMO IN TEMPO FACCIO IL BACKEND
+# Progetto Linguaggi e tecnologie per il web 
+
