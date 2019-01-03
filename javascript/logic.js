@@ -198,6 +198,7 @@ function controlloPagamento() {
                 ordini.push(ordineUtente);
                 localStorage.setItem("ordini", JSON.stringify(ordini));
             }
+            alert("Acquisto completato con successo!\nIl tuo numero d'ordine é " + idOrdineS);
             
         }
     }
@@ -239,7 +240,6 @@ function controlloAcquisto() {
             }
             scalaDatabase(oggettiCarrello, databaseOggetti);
             azzeraCarrelloUtente();
-            alert("Acquisto completato con successo!");
             return oggettiCarrello;
         }
     }
