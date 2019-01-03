@@ -278,6 +278,16 @@ function controlloReclamo() {
     else if(informativaF == false) alert("Accettare la informativa");
     else {
         if(controlloOrdine(ordineF)){
+            var reclamo = [{nome: nomeF, cognome: cognomeF, mail: mailF, ordine: ordineF, problema: problemaF, testo: testoF}];
+            var reclamiJSON = localStorage.getItem("reclami");
+            if(reclamiJSON == null){
+                localStorage.setItem("reclami", JSON.stringify(reclamo));
+            }
+            else {
+                var reclami = JSON.parse(reclamiJSON);
+                reclami.push(reclamo);
+                localStorage.setItem("reclami", JSON.stringify(reclami));
+            }
             alert("Richiesta inviata con successo!");
             location.reload();
         }
